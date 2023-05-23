@@ -1,0 +1,9 @@
+- hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Show interface status
+      ios_command:
+        commands:
+          - dis interfaces status
+      register: interface_status
